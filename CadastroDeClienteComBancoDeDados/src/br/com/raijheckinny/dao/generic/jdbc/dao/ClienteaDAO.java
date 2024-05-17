@@ -187,14 +187,13 @@ public class ClienteaDAO implements IClienteDAO {
     private void atualizarParametrosAlter(PreparedStatement stm, Cliente cliente)  throws SQLException  {
         stm.setString(1, cliente.getNome());
         stm.setString(2, cliente.getCodigo());
-        stm.setLong(3, cliente.getId());
     }
 
     private String getSqlAlter() throws SQLException {
         StringBuilder sb = new StringBuilder();
         sb.append("UPDATE tb_cliente ");
-        sb.append("SET NOME = ?,SET CODIGO = ? ");
-        sb.append("WHERE ID = ?;");
+        sb.append("SET NOME = ? ");
+        sb.append("WHERE CODIGO = ?;");
 
         return sb.toString();
     }
