@@ -5,6 +5,10 @@ public class Cliente {
     private String codigo;
     private String nome;
 
+    public Cliente(){
+
+    }
+
     public Long getId() {
         return id;
     }

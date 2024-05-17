@@ -21,7 +21,7 @@ public class ConnectionFactory {
     private static Connection initConnection() {
         try{
             return DriverManager.getConnection(
-                    "jdbc:postgresql://localhost:15432/clienteDao","postgres","admin");
+                    "jdbc:postgresql://localhost:15432/Loja","postgres","admin");
         } catch (SQLException e) {
             throw  new RuntimeException(e);
         }
